@@ -1,7 +1,7 @@
 import stripe
 from decimal import Decimal
 from django.conf import settings
-from nxtbn.payment.base_payment_gateway import BasePaymentGateway, PaymentResponse
+from nxtbn.payment.base import PaymentPlugin, PaymentResponse
 from rest_framework import serializers
 
 from nxtbn.settings import get_env_var
@@ -11,7 +11,7 @@ stripe.api_key = get_env_var('STRIPE_SECRET_KEY', '')
 class StripePayloadSerializer(serializers.Serializer):
     stripe_payment_method_id = serializers.CharField(max_length=500, required=True)
 
-class StripePaymentGateway(BasePaymentGateway):
+class StripePaymentGateway(PaymentPlugin):
     """Stripe payment gateway implementation."""
 
     gateway_name = 'stripe'
