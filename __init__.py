@@ -1,5 +1,6 @@
 """
 plugin_name: stripe
+plugin_type: PAYMENT_PROCESSOR
 plugin_uri: https://github.com/nxtbn-com/stripe
 version: 1.0.1
 author: bytenyx limited
