@@ -10,8 +10,8 @@ metadata = {
     "nxtbn_version_compatibility": ">=1.0.0"
 }
 
-from nxtbn.payment.plugins.stripe.stripe_gateway import StripePaymentGateway
+from . stripe.stripe_gateway import StripePaymentGateway
 
-gateway = StripePaymentGateway
+plugin = StripePaymentGateway
 
-__all__ = ['gateway']
+__all__ = ['plugin']
