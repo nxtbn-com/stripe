@@ -7,7 +7,9 @@ metadata = {
     "author_uri": "http://bytenyx.com",
     "description": "Plugin to handle payment via stripe.",
     "license": "BSD-3-Clause",
-    "nxtbn_version_compatibility": ">=1.0.0"
+    "nxtbn_version_compatibility": ">=1.0.0",
+    "has_urls": true,
+    
 }
 
 from . stripe.stripe_gateway import StripePaymentGateway
