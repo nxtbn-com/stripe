@@ -8,9 +8,14 @@ metadata = {
     "description": "Plugin to handle payment via stripe.",
     "license": "BSD-3-Clause",
     "nxtbn_version_compatibility": ">=1.0.0",
-    "has_urls": true,
-    
+    "has_urls": True,
+    "environment_variables": {
+        'STRIPE_SECRET_KEY': 'secret',
+        'STRIPE_PUBLIC_KEY': 'str',
+        'USE_STRIPE_INVOICE': 'bool'
+    }
 }
+
 
 from . stripe.stripe_gateway import StripePaymentGateway
 
